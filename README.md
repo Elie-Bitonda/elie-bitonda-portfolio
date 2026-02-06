@@ -30,7 +30,7 @@ This portfolio is designed to:
 - Showcase real-world projects and experience
 - Serve as a central professional identity online
 
-## My Contact
+## Where To reach on me!
 - Email: ebitonda@andrew.cmu.edu
 - Phone: +250 786 627 737
 - LinkedIn: https://www.linkedin.com/in/elie-bitonda-tuyizere-565a00237

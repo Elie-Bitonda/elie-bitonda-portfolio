@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitonda Tuyizere Elie | AI & Robotics Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a2540;
+      --accent: #3ddc97;
+      --bg: #f5f7fa;
+      --text: #1f2933;
+      --card: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--primary), #000);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      opacity: 0.9;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: #000;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    section {
+      padding: 5rem 10%;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Bitonda Tuyizere Elie</h1>
+    <p>AI & Robotics Engineer | Embedded Systems | Machine Learning</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am an aspiring AI engineer pursuing a Master’s degree in Engineering Artificial Intelligence at Carnegie Mellon University Africa. My interests lie at the intersection of machine learning, robotics, and embedded systems, where I focus on building intelligent, real-world solutions.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills & Focus Areas</h2>
+  <div class="grid">
+    <div class="card">Programming: Python, C/C++, Java, JavaScript</div>
+    <div class="card">Robotics & Embedded Systems (ROS, IoT, UAV)</div>
+    <div class="card">Machine Learning & Data Analytics</div>
+    <div class="card">Teaching, Mentorship & Collaboration</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Selected Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Baho Nurse-Bot</h3>
+      <p>Healthcare robotics project focused on non-vital patient monitoring using embedded electronics and robotic systems.</p>
+    </div>
+    <div class="card">
+      <h3>Vehicle Accident Detection System</h3>
+      <p>Embedded system that detects accidents and sends real-time GSM alerts for rapid response.</p>
+    </div>
+    <div class="card">
+      <h3>KwandaBot</h3>
+      <p>ROS-based educational and research robot developed collaboratively at KwaandaLabs.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ebitonda@andrew.cmu.edu">ebitonda@andrew.cmu.edu</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/elie-bitonda-tuyizere-565a00237" target="_blank">View Profile</a></p>
+</section>
+
+<footer>
+  <p>© 2026 Bitonda Tuyizere Elie | Designed with purpose & precision</p>
+</footer>
+
+</body>
+</html>

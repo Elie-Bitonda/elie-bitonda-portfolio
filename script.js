@@ -11,5 +11,15 @@ const revealOnScroll = () => {
   });
 };
 
+
+const images = document.querySelectorAll(".bg-images img");
+let index = 0;
+
+setInterval(() => {
+  images[index].classList.remove("active");
+  index = (index + 1) % images.length;
+  images[index].classList.add("active");
+}, 1000);
+
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();

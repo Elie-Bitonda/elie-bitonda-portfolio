@@ -4,177 +4,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitonda Tuyizere Elie | AI & Robotics Engineer</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #0a2540;
-      --accent: #3ddc97;
-      --bg: #f5f7fa;
-      --text: #1f2933;
-      --card: #ffffff;
-    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      min-height: 100vh;
-      background: linear-gradient(135deg, var(--primary), #000);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      animation: fadeInDown 1s ease;
-    }
-
-    header p {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      opacity: 0.9;
-      animation: fadeInUp 1.5s ease;
-    }
-
-    .btn {
-      margin-top: 2rem;
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: var(--accent);
-      color: #000;
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    section {
-      padding: 5rem 10%;
-    }
-
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-      color: var(--primary);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-
-    footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <div>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
     <h1>Bitonda Tuyizere Elie</h1>
-    <p>AI & Robotics Engineer | Embedded Systems | Machine Learning</p>
-    <a href="#projects" class="btn">View My Work</a>
+    <p>
+      <i class="fa-solid fa-brain"></i> AI Engineer &nbsp;|&nbsp;
+      <i class="fa-solid fa-robot"></i> Robotics &nbsp;|&nbsp;
+      <i class="fa-solid fa-microchip"></i> Embedded Systems
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">
+        <i class="fa-solid fa-code"></i> View My Work
+      </a>
+      <a href="#contact" class="btn ghost">
+        <i class="fa-solid fa-paper-plane"></i> Contact Me
+      </a>
+    </div>
   </div>
 </header>
 
-<section id="about">
+<!-- ABOUT -->
+<section id="about" class="section reveal">
   <h2>About Me</h2>
   <p>
-    I am an aspiring AI engineer pursuing a Master’s degree in Engineering Artificial Intelligence at Carnegie Mellon University Africa. My interests lie at the intersection of machine learning, robotics, and embedded systems, where I focus on building intelligent, real-world solutions.
+    I am an aspiring AI engineer pursuing a Master’s degree in Engineering Artificial Intelligence at Carnegie Mellon University Africa.
+    My passion lies at the intersection of machine learning, robotics, and embedded systems—where intelligent algorithms meet real-world impact.
   </p>
 </section>
 
-<section id="skills">
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
   <h2>Skills & Focus Areas</h2>
+
   <div class="grid">
-    <div class="card">Programming: Python, C/C++, Java, JavaScript</div>
-    <div class="card">Robotics & Embedded Systems (ROS, IoT, UAV)</div>
-    <div class="card">Machine Learning & Data Analytics</div>
-    <div class="card">Teaching, Mentorship & Collaboration</div>
+    <div class="card skill">
+      <i class="fa-solid fa-code"></i>
+      <h3>Programming</h3>
+      <p>Python, C/C++, Java, JavaScript</p>
+    </div>
+
+    <div class="card skill">
+      <i class="fa-solid fa-robot"></i>
+      <h3>Robotics</h3>
+      <p>ROS, IoT, UAV Systems</p>
+    </div>
+
+    <div class="card skill">
+      <i class="fa-solid fa-brain"></i>
+      <h3>Machine Learning</h3>
+      <p>ML Models, Data Analytics</p>
+    </div>
+
+    <div class="card skill">
+      <i class="fa-solid fa-people-group"></i>
+      <h3>Leadership</h3>
+      <p>Teaching, Mentorship, Collaboration</p>
+    </div>
   </div>
 </section>
 
-<section id="projects">
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
   <h2>Selected Projects</h2>
+
   <div class="grid">
-    <div class="card">
-      <h3>Baho Nurse-Bot</h3>
-      <p>Healthcare robotics project focused on non-vital patient monitoring using embedded electronics and robotic systems.</p>
+    <div class="card project">
+      <h3><i class="fa-solid fa-hospital"></i> Baho Nurse-Bot</h3>
+      <p>Healthcare robot for non-vital patient monitoring using embedded electronics and robotics.</p>
     </div>
-    <div class="card">
-      <h3>Vehicle Accident Detection System</h3>
-      <p>Embedded system that detects accidents and sends real-time GSM alerts for rapid response.</p>
+
+    <div class="card project">
+      <h3><i class="fa-solid fa-car-crash"></i> Accident Detection System</h3>
+      <p>Embedded system detecting vehicle accidents and sending real-time GSM alerts.</p>
     </div>
-    <div class="card">
-      <h3>KwandaBot</h3>
+
+    <div class="card project">
+      <h3><i class="fa-solid fa-robot"></i> KwandaBot</h3>
       <p>ROS-based educational and research robot developed collaboratively at KwaandaLabs.</p>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:ebitonda@andrew.cmu.edu">ebitonda@andrew.cmu.edu</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/elie-bitonda-tuyizere-565a00237" target="_blank">View Profile</a></p>
+
+  <p>
+    <i class="fa-solid fa-envelope"></i>
+    <a href="mailto:ebitonda@andrew.cmu.edu">ebitonda@andrew.cmu.edu</a>
+  </p>
+
+  <p>
+    <i class="fa-brands fa-linkedin"></i>
+    <a href="https://www.linkedin.com/in/elie-bitonda-tuyizere-565a00237" target="_blank">
+      LinkedIn Profile
+    </a>
+  </p>
 </section>
 
 <footer>
   <p>© 2026 Bitonda Tuyizere Elie | Designed with purpose & precision</p>
 </footer>
 
+<!-- JS -->
+<script src="script.js"></script>
 </body>
 </html>

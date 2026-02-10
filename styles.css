@@ -20,14 +20,15 @@ body {
   scroll-behavior: smooth;
 }
 
-/* HEADER */
 header {
   min-height: 100vh;
   background: linear-gradient(135deg, var(--primary), #000);
   color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-align: center;
   padding: 2rem;
 }
@@ -48,6 +49,7 @@ header p {
 header i {
   color: var(--accent);
 }
+
 
 /* BUTTON */
 .btn {

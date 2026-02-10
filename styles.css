@@ -69,6 +69,24 @@ header i {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.2);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.btn:hover::after {
+  transform: translateX(0);
+}
+
 
 /* SECTIONS */
 section {

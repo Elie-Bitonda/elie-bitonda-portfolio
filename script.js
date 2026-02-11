@@ -1,3 +1,4 @@
+// Scroll reveal
 const reveals = document.querySelectorAll(".reveal");
 
 const revealOnScroll = () => {
@@ -11,15 +12,20 @@ const revealOnScroll = () => {
   });
 };
 
-
-const images = document.querySelectorAll(".bg-images img");
-let index = 0;
-
-setInterval(() => {
-  images[index].classList.remove("active");
-  index = (index + 1) % images.length;
-  images[index].classList.add("active");
-}, 1000);
-
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+
+// Hero slider
+const heroSlides = document.querySelectorAll(".hero-slider img");
+let currentSlide = 0;
+
+function changeSlide() {
+  heroSlides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % heroSlides.length;
+  heroSlides[currentSlide].classList.add("active");
+}
+
+if (heroSlides.length > 0) {
+  heroSlides[0].classList.add("active");
+  setInterval(changeSlide, 5000);
+}

@@ -54,36 +54,42 @@ header {
   object-fit: cover;
 }
 
-/* RIGHT: SLIDER */
+/* RIGHT SIDE: SLIDER */
 .hero-slider {
   width: 50%;
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 8% 100%);
   overflow: hidden;
   position: relative;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 8% 100%);
 }
 
-/* Sliding track */
+/* Track */
 .slider-track {
   display: flex;
   height: 100%;
   width: 300%;
-  animation: slideImages 15s infinite ease-in-out;
 }
 
+/* Each image */
 .slider-track img {
-  flex: 0 0 100%;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  flex: 0 0 33.3333%;
 }
 
-/* Slide animation */
+/* Animation */
 @keyframes slideImages {
-  0%, 30%   { transform: translateX(0); }
-  35%, 65%  { transform: translateX(-100%); }
-  70%, 95%  { transform: translateX(-200%); }
-  100%      { transform: translateX(0); }
+  0%, 30%   { transform: translateX(0%); }
+  35%, 65%  { transform: translateX(-33.3333%); }
+  70%, 95%  { transform: translateX(-66.6666%); }
+  100%      { transform: translateX(0%); }
 }
+
+/* Apply animation */
+.slider-track {
+  animation: slideImages 15s infinite ease-in-out;
+}
+
 
 /* Blue overlay */
 .hero-bg::after {

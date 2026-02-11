@@ -23,6 +23,7 @@ body {
 /* =========================
    HERO / HEADER
 ========================= */
+
 header {
   position: relative;
   min-height: 100vh;
@@ -38,14 +39,14 @@ header {
   position: absolute;
   inset: 0;
   display: flex;
-  z-index: 1;
+  z-index: 0; /* stays behind text */
 }
 
 /* LEFT: VIDEO */
 .hero-video {
   width: 50%;
-  clip-path: polygon(0 0, 92% 0, 75% 100%, 0 100%);
   overflow: hidden;
+  clip-path: polygon(0 0, 92% 0, 75% 100%, 0 100%);
 }
 
 .hero-video video {
@@ -54,7 +55,7 @@ header {
   object-fit: cover;
 }
 
-/* RIGHT SIDE: SLIDER */
+/* RIGHT: SLIDER */
 .hero-slider {
   width: 50%;
   overflow: hidden;
@@ -62,22 +63,23 @@ header {
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 8% 100%);
 }
 
-/* Track */
+/* Sliding track */
 .slider-track {
   display: flex;
   height: 100%;
   width: 300%;
+  animation: slideImages 15s infinite ease-in-out;
 }
 
 /* Each image */
 .slider-track img {
+  flex: 0 0 33.3333%;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  flex: 0 0 33.3333%;
 }
 
-/* Animation */
+/* Slide animation */
 @keyframes slideImages {
   0%, 30%   { transform: translateX(0%); }
   35%, 65%  { transform: translateX(-33.3333%); }
@@ -85,27 +87,21 @@ header {
   100%      { transform: translateX(0%); }
 }
 
-/* Apply animation */
-.slider-track {
-  animation: slideImages 15s infinite ease-in-out;
-}
-
-
 /* Blue overlay */
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(10, 37, 64, 0.65);
+  z-index: 1;
 }
 
-/* Hero text */
+/* Hero content (always above background) */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   color: white;
 }
-
 
 header h1 {
   font-size: 3rem;
@@ -122,81 +118,6 @@ header p {
 
 header i {
   color: var(--accent);
-}
-
-/* HERO BACKGROUND WRAPPER */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  z-index: 1;
-}
-
-/* LEFT SIDE: VIDEO */
-.hero-video {
-  flex: 1;
-  clip-path: polygon(0 0, 92% 0, 75% 100%, 0 100%);
-  overflow: hidden;
-}
-
-.hero-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* RIGHT SIDE SLIDER */
-.hero-slider {
-  flex: 1;
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 8% 100%);
-  overflow: hidden;
-  position: relative;
-}
-
-.slider-track {
-  display: flex;
-  width: 300%;
-  height: 100%;
-  animation: slideImages 12s infinite;
-}
-
-.slider-track img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* SLIDING ANIMATION */
-@keyframes slideImages {
-  0%   { transform: translateX(0); }
-  33%  { transform: translateX(-100%); }
-  66%  { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
-}
-
-
-/* BLUE OVERLAY */
-.hero-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 37, 64, 0.65);
-}
-
-/* HERO TEXT */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-}
-
-/* SLIDER ANIMATION */
-@keyframes slideImages {
-  0%   { transform: translateX(0); }
-  33%  { transform: translateX(-100%); }
-  66%  { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
 }
 
 /* =========================

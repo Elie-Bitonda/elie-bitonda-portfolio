@@ -112,6 +112,73 @@ header i {
   color: var(--accent);
 }
 
+/* HERO BACKGROUND WRAPPER */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 1;
+}
+
+/* LEFT SIDE: VIDEO */
+.hero-video {
+  flex: 1;
+  clip-path: polygon(0 0, 92% 0, 75% 100%, 0 100%);
+  overflow: hidden;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT SIDE: SLIDER */
+.hero-slider {
+  flex: 1;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 8% 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+/* SLIDING TRACK */
+.slider-track {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slideImages 12s infinite;
+}
+
+.slider-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BLUE OVERLAY */
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 37, 64, 0.65);
+}
+
+/* HERO TEXT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+/* SLIDER ANIMATION */
+@keyframes slideImages {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
 /* =========================
    BUTTON
 ========================= */

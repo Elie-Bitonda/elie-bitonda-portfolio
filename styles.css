@@ -133,7 +133,7 @@ header i {
   object-fit: cover;
 }
 
-/* RIGHT SIDE: SLIDER */
+/* RIGHT SIDE SLIDER */
 .hero-slider {
   flex: 1;
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 8% 100%);
@@ -141,7 +141,6 @@ header i {
   position: relative;
 }
 
-/* SLIDING TRACK */
 .slider-track {
   display: flex;
   width: 300%;
@@ -154,6 +153,15 @@ header i {
   height: 100%;
   object-fit: cover;
 }
+
+/* SLIDING ANIMATION */
+@keyframes slideImages {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
 
 /* BLUE OVERLAY */
 .hero-bg::after {

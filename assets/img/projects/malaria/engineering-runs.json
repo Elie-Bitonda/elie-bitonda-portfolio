@@ -1,0 +1,95 @@
+{
+  "pf": {
+    "engineering_baseline_only": true,
+    "diagnosis": null,
+    "original_resolution": {
+      "width": 1008,
+      "height": 760
+    },
+    "class_names": {
+      "0": "PF",
+      "1": "PM",
+      "2": "PO",
+      "3": "PV",
+      "4": "WBC"
+    },
+    "tile_size": 640,
+    "stride": 512,
+    "nominal_overlap": 0.2,
+    "horizontal_positions": 2,
+    "vertical_positions": 2,
+    "total_tiles": 4,
+    "tiles_processed_successfully": 4,
+    "failed_tile_ids": [],
+    "confidence_threshold": 0.1,
+    "nms_iou_threshold": 0.5,
+    "raw_detection_count": 250,
+    "merged_detection_count": 102,
+    "class_counts_before_nms": {
+      "PF": 233,
+      "WBC": 17
+    },
+    "class_counts_after_nms": {
+      "PF": 97,
+      "WBC": 5
+    },
+    "total_inference_seconds": 0.616236800000479,
+    "all_output_boxes_within_image": true,
+    "public_example": "PF"
+  },
+  "pm": {
+    "engineering_baseline_only": true,
+    "diagnosis": null,
+    "original_resolution": {
+      "width": 4032,
+      "height": 3040
+    },
+    "class_names": {
+      "0": "PF",
+      "1": "PM",
+      "2": "PO",
+      "3": "PV",
+      "4": "WBC"
+    },
+    "tile_size": 640,
+    "stride": 512,
+    "nominal_overlap": 0.2,
+    "horizontal_positions": 8,
+    "vertical_positions": 6,
+    "total_tiles": 48,
+    "tiles_processed_successfully": 48,
+    "failed_tile_ids": [],
+    "confidence_threshold": 0.1,
+    "nms_iou_threshold": 0.5,
+    "raw_detection_count": 7,
+    "merged_detection_count": 5,
+    "class_counts_before_nms": {
+      "PM": 5,
+      "PO": 1,
+      "WBC": 1
+    },
+    "class_counts_after_nms": {
+      "PM": 3,
+      "PO": 1,
+      "WBC": 1
+    },
+    "total_inference_seconds": 9.303214100000332,
+    "all_output_boxes_within_image": true,
+    "public_example": "PM"
+  },
+  "review": {
+    "engineering_baseline_only": true,
+    "diagnosis": null,
+    "original_resolution": {
+      "width": 4032,
+      "height": 3040
+    },
+    "total_tiles": 48,
+    "raw_detection_count": 0,
+    "merged_detection_count": 0,
+    "flagged_for_review": true,
+    "reason_codes": [
+      "NO_PARASITE_DETECTIONS"
+    ]
+  }
+}

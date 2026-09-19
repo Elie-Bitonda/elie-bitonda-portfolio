@@ -1,0 +1,104 @@
+/* Scoped to the malaria card, case study and its image gallery. */
+.malaria-project .visual-label { background:rgba(5,25,45,.88); padding:7px 9px; right:18px; width:fit-content; }
+dialog.malaria-dialog { width:min(1040px,calc(100% - 32px)); }
+.malaria-dialog > .dialog-close { position:sticky; top:0; z-index:4; background:white; box-shadow:0 2px 8px #0a254018; }
+.malaria-case { max-width:960px; margin:auto; }
+.malaria-case h2 { margin-bottom:12px; }
+.malaria-case .malaria-subtitle { font-size:20px; font-weight:600; color:var(--navy); margin-bottom:18px; }
+.malaria-case .lead { font-size:19px; }
+.malaria-case h3 { font-size:27px; margin:0 0 20px; line-height:1.22; }
+.malaria-case h4 { font-size:16px; line-height:1.4; letter-spacing:-.01em; margin:0 0 12px; }
+.malaria-case p,.malaria-case li { font-size:15px; color:var(--muted); }
+.malaria-case strong { color:var(--navy); }
+.malaria-case em { font-style:italic; color:inherit; }
+.malaria-case .eyebrow { font-size:10px; margin-bottom:16px; }
+.malaria-notice { border-left:3px solid var(--mint); background:var(--soft); padding:18px 22px; margin:25px 0; }
+.malaria-notice p { font-size:13px; margin:8px 0 0; }
+.malaria-jumps { display:flex; flex-wrap:wrap; gap:8px; }
+.malaria-jumps button { background:white; border:1px solid var(--line); padding:7px 12px; font-size:12px; border-radius:3px; color:var(--navy); }
+.malaria-jumps button:hover { background:var(--soft); }
+.malaria-part { border-top:1px solid var(--line); padding-top:34px; margin-top:38px; scroll-margin-top:75px; }
+.malaria-case .malaria-small,.malaria-source-note { font-size:12px; line-height:1.8; }
+.malaria-metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:25px 0; }
+.malaria-metrics>div { border-left:2px solid var(--mint); padding:8px 0 8px 12px; }
+.malaria-metrics strong { display:block; font-size:22px; line-height:1.2; letter-spacing:-.03em; }
+.malaria-metrics span { display:block; font-size:11px; color:var(--muted); margin-top:8px; }
+.malaria-pipeline { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; padding:1px; background:#2e4960; border-radius:4px; overflow:hidden; counter-reset:none; list-style:none; }
+.malaria-pipeline li { margin:0; padding:19px 16px; background:var(--navy); display:flex; flex-direction:column; gap:10px; }
+.malaria-pipeline li>span { color:var(--mint); font-size:11px; }
+.malaria-pipeline strong { color:white; font-size:13px; line-height:1.5; }
+.malaria-pipeline small { color:#bdcfd9; font-size:11px; }
+.malaria-gallery,.malaria-two-col,.malaria-challenges { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.malaria-figure { margin:24px 0; min-width:0; }
+.malaria-gallery .malaria-figure { margin:0 0 15px; }
+.malaria-figure>a { display:block; position:relative; overflow:hidden; border-radius:4px; background:var(--soft); }
+.malaria-figure img { width:100%; height:auto; }
+.malaria-gallery .malaria-figure img { height:250px; object-fit:contain; }
+.malaria-figure>a>span { position:absolute; right:10px; bottom:10px; background:var(--navy); color:white; padding:4px 9px; border-radius:3px; font-size:10px; }
+.malaria-figure a:hover>span { background:var(--green); }
+.malaria-figure figcaption { font-size:12px; color:var(--muted); line-height:1.75; padding-top:13px; }
+.malaria-figure figcaption strong { display:block; font-size:14px; margin-bottom:5px; }
+.malaria-case pre { margin:0; background:var(--deep); color:#d8efe3; padding:22px; border-radius:4px; font-size:12px; line-height:1.8; white-space:pre-wrap; overflow-wrap:anywhere; }
+.malaria-json-figure pre { min-height:250px; display:flex; align-items:center; }
+.malaria-detail-layout { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:30px; }
+.malaria-detail-layout .malaria-figure img { image-rendering:auto; }
+.malaria-formula { padding:18px 22px; margin:22px 0; background:var(--soft); font-size:15px; color:var(--navy); border-left:2px solid var(--mint); }
+.malaria-counts { display:flex; align-items:center; gap:35px; padding:25px 0; }
+.malaria-counts>div { flex:1; display:flex; flex-direction:column; gap:6px; }
+.malaria-counts>span { font-size:30px; color:var(--green); }
+.malaria-counts div>span { font-size:10px; letter-spacing:.08em; }
+.malaria-counts strong { font-size:48px; line-height:1.1; }
+.malaria-counts small { font-size:13px; color:var(--muted); }
+.malaria-table-wrap { overflow-x:auto; margin:24px 0; }
+.malaria-case table { border-collapse:collapse; width:100%; font-size:13px; }
+.malaria-case caption { text-align:left; margin-bottom:12px; font-size:12px; color:var(--muted); }
+.malaria-case th,.malaria-case td { padding:13px 10px; text-align:left; border-bottom:1px solid var(--line); }
+.malaria-case thead { background:var(--navy); color:white; }
+.malaria-case tbody th { font-weight:500; color:var(--navy); }
+.malaria-review { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:24px 0; align-items:center; }
+.malaria-artifacts { list-style:none; padding:0; }
+.malaria-artifacts li { border:1px solid var(--line); border-left:3px solid var(--mint); padding:8px 14px; font-size:11px; letter-spacing:.08em; }
+.malaria-audit { background:var(--soft); padding:18px 22px; }
+.malaria-audit p { margin:18px 0 0; font-size:13px; }
+.malaria-case .malaria-context-label { font-size:10px; letter-spacing:.12em; color:var(--green); font-weight:600; }
+.malaria-workflow { display:flex; flex-wrap:wrap; align-items:center; gap:9px; padding:22px; border:1px solid var(--line); margin:24px 0 15px; }
+.malaria-workflow span { background:var(--soft); padding:8px 12px; font-size:12px; color:var(--navy); }
+.malaria-workflow b { font-weight:400; color:var(--green); }
+.malaria-case blockquote { border-left:2px solid var(--mint); margin:24px 0; padding:4px 0 4px 20px; color:var(--muted); font-size:14px; }
+.malaria-challenges>div { border-top:2px solid var(--mint); padding:18px; background:var(--soft); }
+.malaria-challenges p { margin:0; font-size:13px; }
+.malaria-limitations { background:var(--soft); padding:25px; border:1px solid var(--line); }
+.malaria-source-note { margin:25px 0 0; }
+/* Native nested dialog preserves the case-study reading position. */
+.malaria-lightbox { width:min(1200px,calc(100% - 24px)); padding:24px; max-height:94svh; }
+.malaria-lightbox h2 { font-size:22px; margin:0; }
+.malaria-lightbox-header { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:18px; }
+.malaria-lightbox button { border:1px solid var(--line); background:var(--soft); color:var(--navy); font-size:12px; padding:8px 13px; border-radius:3px; }
+.malaria-lightbox-viewport { overflow:auto; background:var(--deep); max-height:62svh; min-height:120px; }
+.malaria-lightbox-viewport img { width:auto; max-width:100%; max-height:62svh; object-fit:contain; margin:auto; }
+.malaria-lightbox-viewport.is-zoomed img { max-width:none; max-height:none; margin:0; }
+.malaria-lightbox-footer { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin-top:16px; }
+.malaria-lightbox-footer output { font-size:12px; margin-right:auto; }
+.malaria-lightbox .malaria-lightbox-caption { font-size:13px; margin:15px 0 0; }
+@media(max-width:768px) {
+  .malaria-pipeline { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .malaria-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+  .malaria-detail-layout,.malaria-review { grid-template-columns:1fr; gap:12px; }
+}
+@media(max-width:540px) {
+  .malaria-gallery,.malaria-two-col,.malaria-challenges { grid-template-columns:1fr; }
+  .malaria-case h3 { font-size:24px; }
+  .malaria-case .malaria-subtitle { font-size:17px; }
+  .malaria-case .lead { font-size:16px; }
+  .malaria-case p,.malaria-case li { font-size:14px; }
+  .malaria-gallery .malaria-figure img { height:auto; }
+  .malaria-pipeline li { padding:15px 12px; }
+  .malaria-counts { gap:15px; }
+  .malaria-counts div>span { font-size:8px; }
+  .malaria-counts small { font-size:11px; }
+  .malaria-case th,.malaria-case td { padding:10px 6px; font-size:11px; }
+  .malaria-case pre { padding:15px; font-size:11px; }
+  .malaria-lightbox { padding:16px; }
+  .malaria-lightbox h2 { font-size:18px; }
+  .malaria-limitations { padding:20px; }
+}

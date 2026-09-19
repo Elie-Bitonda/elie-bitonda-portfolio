@@ -92,7 +92,7 @@ const skillsVideo = document.querySelector('.skills-background-video');
 const skillsSource = skillsVideo.querySelector('source');
 let skillsNearby = false;
 function syncSkillsVideo() {
-  const shouldPlay = skillsNearby && !reducedMotion.matches && !document.hidden;
+  const shouldPlay = skillsNearby && !reducedMotion.matches && !document.hidden && !document.querySelector('#project-dialog').open;
   skillsVideo.muted = true;
   skillsVideo.autoplay = shouldPlay;
   if (!shouldPlay) { skillsVideo.pause(); return; }
@@ -103,7 +103,7 @@ function syncSkillsVideo() {
   skillsVideo.play().catch(() => { /* The poster and navy background remain usable. */ });
 }
 skillsVideo.addEventListener('play', () => {
-  if (!skillsNearby || reducedMotion.matches || document.hidden) skillsVideo.pause();
+  if (!skillsNearby || reducedMotion.matches || document.hidden || document.querySelector('#project-dialog').open) skillsVideo.pause();
 });
 reducedMotion.addEventListener('change', syncSkillsVideo);
 document.addEventListener('visibilitychange', syncSkillsVideo);
@@ -141,7 +141,7 @@ if (typeof dialog.showModal === 'function') {
     dialogContent.firstElementChild.removeAttribute('id');
     dialogContent.querySelector('h2').id = 'dialog-title';
     dialog.classList.toggle('malaria-dialog', link.dataset.project === 'malaria');
-    if (link.dataset.project !== 'malaria') {
+    if (!['malaria', 'baho', 'accident', 'kwanda'].includes(link.dataset.project)) {
     const figure = document.createElement('figure');
     figure.style.margin = '28px 0 0';
     const image = document.querySelector(`.project-visual[data-project="${link.dataset.project}"] img`).cloneNode();
@@ -153,6 +153,7 @@ if (typeof dialog.showModal === 'function') {
     figure.append(image); dialogContent.append(figure, caption, zoom);
     }
     document.body.classList.add('modal-open'); dialog.showModal(); dialog.scrollTop = 0;
+    syncSkillsVideo();
     document.querySelector('.dialog-close').focus();
   }));
   document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
@@ -168,5 +169,9 @@ if (typeof dialog.showModal === 'function') {
     const bounds = dialog.getBoundingClientRect();
     if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
   });
-  dialog.addEventListener('close', () => { document.body.classList.remove('modal-open'); trigger?.focus(); });
+  dialog.addEventListener('close', () => {
+    dialog.querySelectorAll('video').forEach(media => media.pause());
+    syncSkillsVideo();
+    document.body.classList.remove('modal-open'); trigger?.focus();
+  });
 }

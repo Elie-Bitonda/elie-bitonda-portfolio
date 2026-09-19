@@ -1,0 +1,39 @@
+/* Scoped to the vehicle accident case study. */
+.vehicle-case section { margin-top:30px; padding-top:26px; border-top:1px solid var(--line); }
+.vehicle-case h3 { margin-top:0; }
+.vehicle-case .eyebrow { font-size:10px; margin-bottom:13px; }
+.vehicle-subtitle { font-size:20px; color:var(--navy); font-weight:600; }
+.vehicle-case figure { margin:22px 0 0; }
+.vehicle-case figcaption, .vehicle-case .vehicle-note { font-size:12px; color:var(--muted); line-height:1.7; }
+.vehicle-case figcaption { margin-top:10px; }
+.vehicle-architecture { background:var(--deep); color:white; padding:24px; border-radius:4px; }
+.vehicle-nodes { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.vehicle-nodes>div { padding:14px 10px; border:1px solid #526774; border-radius:3px; }
+.vehicle-architecture strong { display:block; font-size:14px; }
+.vehicle-architecture span { display:block; font-size:12px; line-height:1.6; }
+.vehicle-core { padding:18px; text-align:center; border:1px solid var(--mint); color:var(--mint); }
+.vehicle-architecture .vehicle-arrow { text-align:center; margin:12px 0; color:var(--mint); font-size:22px; }
+.vehicle-architecture .vehicle-arrow span { color:#d6e3e8; }
+.vehicle-architecture .vehicle-monitor { font-size:12px; line-height:1.8; color:#d6e3e8; margin:20px 0 0; }
+.vehicle-components { margin:20px 0; }
+.vehicle-components>div { display:grid; grid-template-columns:180px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid var(--line); }
+.vehicle-case dt { font-weight:600; color:var(--navy); }
+.vehicle-case dd { margin:0; }
+.vehicle-flow { list-style:none; padding:0; margin:24px auto; max-width:470px; counter-reset:stage; }
+.vehicle-flow li { position:relative; margin-bottom:26px; padding:13px 18px; background:var(--soft); border-left:2px solid var(--mint); font-size:14px; color:var(--navy); }
+.vehicle-flow li:not(:last-child)::after { content:'↓'; position:absolute; bottom:-27px; left:50%; color:var(--teal, #087f7a); }
+.vehicle-flow span { display:block; font-size:12px; margin-top:6px; }
+.vehicle-gallery { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.vehicle-gallery img { width:100%; height:auto; display:block; border-radius:4px; }
+.vehicle-interface { border:1px solid var(--line); padding:20px; border-radius:4px; }
+.vehicle-interface-heading { display:flex; justify-content:space-between; gap:16px; color:var(--navy); }
+.vehicle-interface-heading span { font-size:11px; color:var(--muted); }
+.vehicle-interface dl>div { display:grid; grid-template-columns:140px 1fr; gap:14px; padding:9px 0; border-bottom:1px solid var(--line); font-size:13px; }
+.vehicle-journey video { display:block; width:100%; max-width:360px; height:auto; margin:auto; background:var(--deep); border-radius:4px; }
+@media(max-width:600px) {
+ .vehicle-nodes, .vehicle-gallery { grid-template-columns:1fr; }
+ .vehicle-nodes>div { padding:10px 14px; }
+ .vehicle-components>div, .vehicle-interface dl>div { grid-template-columns:1fr; gap:4px; }
+ .vehicle-interface-heading { flex-direction:column; gap:4px; }
+ .vehicle-architecture { padding:18px; }
+}

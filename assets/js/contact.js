@@ -4,7 +4,11 @@
   const status = document.querySelector('#form-status');
   const button = document.querySelector('#send-message');
   const fields = [...form.querySelectorAll('[required]')];
-  const endpoint = 'https://formsubmit.co/ajax/ebitonda@andrew.cmu.edu';
+  // The native form action is the single source of truth for the recipient.
+  const recipient = decodeURIComponent(new URL(form.action).pathname.slice(1));
+  const endpoint = `https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`;
+  const directEmail = document.querySelector('#contact .inline-link[href^="mailto:"]');
+  directEmail.href = `mailto:${recipient}`;
   let submitting = false;
   form.noValidate = true;
   function validate(field) {
@@ -20,7 +24,11 @@
     event.preventDefault();
     if (submitting) return;
     const valid = fields.map(validate).every(Boolean);
-    if (!valid) { fields.find(field => field.getAttribute('aria-invalid') === 'true').focus(); return; }
+    if (!valid) {
+      status.dataset.state = 'error';
+      status.textContent = 'Please correct the highlighted fields before sending.';
+      fields.find(field => field.getAttribute('aria-invalid') === 'true').focus(); return;
+    }
     if (form.elements._honey.value) return;
     submitting = true;
     button.disabled = true;
@@ -31,16 +39,20 @@
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 20000);
     try {
-      const response = await fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' }, signal: controller.signal });
+      const payload = new FormData(form);
+      fields.forEach(field => payload.set(field.name, field.value.trim()));
+      payload.set('_subject', `Portfolio Contact — ${form.elements.subject.value.trim().replace(/[\r\n]/g, ' ')}`);
+      payload.set('_replyto', form.elements.email.value.trim());
+      const response = await fetch(endpoint, { method: 'POST', body: payload, headers: { Accept: 'application/json' }, signal: controller.signal });
       const result = await response.json();
       if (!response.ok || !(result.success === true || result.success === 'true')) throw new Error('Submission not accepted');
       status.dataset.state = 'success';
-      status.textContent = 'Thank you. Your message has been submitted successfully. You can also reach me directly by email.';
+      status.textContent = 'Message sent successfully. Thank you — I’ll get back to you soon.';
       form.reset();
       fields.forEach(field => field.removeAttribute('aria-invalid'));
     } catch {
       status.dataset.state = 'error';
-      status.textContent = 'Your message could not be confirmed. Your text has been kept. Please try again, or email ebitonda@andrew.cmu.edu directly.';
+      status.textContent = `Your message could not be sent right now. Your text has been kept. Please email me directly at ${recipient}.`;
     } finally {
       clearTimeout(timeout);
       submitting = false;

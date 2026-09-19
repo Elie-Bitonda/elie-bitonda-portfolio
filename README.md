@@ -14,7 +14,7 @@ Nothing has been pushed or published by this rebuild.
 
 ## Contact activation
 
-The native form action and JavaScript AJAX endpoint are configured for `ebitonda@andrew.cmu.edu`. No account ID or private key is needed. See [FormSubmit documentation](https://formsubmit.co/) and [AJAX documentation](https://formsubmit.co/ajax-documentation).
+The native form action centrally configures the recipient; JavaScript derives the AJAX endpoint from it. The recipient is `ebitonda@andrew.cmu.edu`. No account ID or private key is needed. See [FormSubmit documentation](https://formsubmit.co/) and [AJAX documentation](https://formsubmit.co/ajax-documentation).
 
 From the deployed HTTPS page, send one genuine test enquiry. FormSubmit may email an activation link to the owner on first use. Open the CMU inbox (and spam folder), confirm the address, then submit again and verify that the enquiry arrives and Reply-To works. Repeat this check after changing the hosting domain if the service requests activation again.
 
@@ -39,9 +39,11 @@ Project-specific repository/demo links, individual responsibilities for the acci
 - `index.html`: content, contact recipient in form action, SEO, project case-study articles.
 - `assets/css/style.css`: palette, typography, layout, transitions, responsive styles.
 - `assets/js/main.js`: video, navigation, reveals, project filters and native dialogs.
-- `assets/js/contact.js`: matching contact recipient in `endpoint`, submission and validation.
+- `assets/js/contact.js`: submission, dynamic email subject, Reply-To and validation. Recipient configuration lives in the form action in `index.html`.
 - `assets/css/malaria.css` and `assets/js/malaria.js`: scoped case-study styling and accessible image gallery.
 - `assets/img/`: original schematics, hero poster, favicon, social sharing card.
 - `assets/video/engineering.mp4`: existing portfolio video (approximately 1.1 MB).
 
 System typography avoids external font requests. The hero video has a poster, pause control, reduced-motion handling, and pauses when out of view. Inline case studies remain readable if JavaScript is unavailable.
+
+Baho uses selected real prototype images and a user-played video in its case study; video 2 remains the Skills background. See `CONTACT-SETUP.md` for the required one-time activation and second live delivery check. Delivery is not yet verified.
